@@ -1,18 +1,25 @@
 import React from 'react';
-import { Button } from './FeedbackOptions.styled';
+import PropTypes from 'prop-types';
+import { Button, Container } from './FeedbackOptions.styled';
 
 export const FeeadbackOptions = ({options, onLeaveFeedback}) => (
-    <>
-    {options.map((feedback, index)=> (
+    <Container className='btn-container'>
+    {options.map((feedback)=> (
         <Button
           className='btn'
           type="button"
-          key={index}
+          key={feedback}
           id={feedback}
           onClick={onLeaveFeedback}
         >
           {feedback}
         </Button>
     ))}
-  </>
+  </Container>
 ) 
+
+
+Event.PropTypes = {
+  options: PropTypes.array.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+}

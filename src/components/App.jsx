@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Section } from './Section/Section';
-import { FeeadbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
+import { FeeadbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
 // import PropTypes from 'prop-types';
